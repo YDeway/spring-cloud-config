@@ -1,0 +1,21 @@
+spring:
+  profiles: company
+  datasource:
+    name: mysql
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://10.62.201.102:3306/buck
+    username: wcdmaria
+    password: wistron888
+    type: org.springframework.jdbc.datasource.DriverManagerDataSource
+
+
+---
+spring:
+  profiles: home
+  datasource:
+    name: mysql
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://129.28.78.146:3306/spring
+    username: root
+    password: 2012dwDW
+    type: org.springframework.jdbc.datasource.DriverManagerDataSource

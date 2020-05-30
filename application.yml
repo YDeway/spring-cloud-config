@@ -1,0 +1,42 @@
+## 手动刷新端点：actuator/refresh -X POST
+## 自动需要使用消息队列和git的webhooks
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+admin: 
+  name: buck
+  role: manager
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+##用来配置spring-boot-admin 服务器     
+# spring:
+  # application:
+    # name: ingredient-service
+  # boot:
+    # admin:
+      # client:
+        # url: http://localhost:9090        
+---
+spring:
+  profiles: prd
+
+datasource:
+  url: 正式环境
+  
+---
+spring:
+  profiles: dev
+
+datasource:
+  url: 开发环境  
