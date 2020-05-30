@@ -1,3 +1,8 @@
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.buck.consumer.entity
+
+---
 spring:
   profiles: company
   datasource:
