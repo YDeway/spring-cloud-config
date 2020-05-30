@@ -6,10 +6,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:8080/eureka
 
-admin: 
-  name: buck
-  role: manager
-
 management:
   endpoints:
     web:
@@ -26,17 +22,4 @@ management:
   # boot:
     # admin:
       # client:
-        # url: http://localhost:9090        
----
-spring:
-  profiles: prd
-
-datasource:
-  url: 正式环境
-  
----
-spring:
-  profiles: dev
-
-datasource:
-  url: 开发环境  
+        # url: http://localhost:9090          
