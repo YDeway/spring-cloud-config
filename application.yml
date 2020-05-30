@@ -1,5 +1,7 @@
 ## 手动刷新端点：actuator/refresh -X POST
 ## 自动需要使用消息队列和git的webhooks
+server:
+  port: 0
 
 eureka:
   client:
